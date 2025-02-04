@@ -14,3 +14,17 @@ sudo pip3 install --break-system-packages --upgrade rpi-lgpio
 
 sudo pip3 install --break-system-packages --upgrade adafruit-circuitpython-amg88xx adafruit-circuitpython-rplidar adafruit-circuitpython-motor
 sudo pip3 install --break-system-packages --upgrade bless
+
+git clone https://github.com/spartanrobot/bt_ip.git
+# Might need to add system dependencies for bless
+sudo cp /home/admin/bt_ip/bt_ip.service /lib/systemd/system/bt_ip.service
+sudo chmod 644 /lib/systemd/system/bt_ip.service
+sudo systemctl daemon-reload
+sudo systemctl enable sample.service
+
+read -p "Do you want to reboot now? [Y/n] " -n 1 -r
+echo    
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    sudo reboot
+fi
