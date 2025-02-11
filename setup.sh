@@ -5,7 +5,7 @@ sudo raspi-config nonint do_ssh 0
 sudo raspi-config nonint do_camera 0
 sudo raspi-config nonint disable_raspi_config_at_boot 0
 
-sudo apt upgrade
+sudo apt update
 sudo apt-get install -y python3-pip git i2c-tools libgpiod-dev python3-libgpiod
 sudo pip3 install --break-system-packages --upgrade adafruit-blinka
 
