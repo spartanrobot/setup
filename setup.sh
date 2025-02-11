@@ -20,7 +20,7 @@ git clone https://github.com/spartanrobot/bt_ip.git
 sudo cp /home/admin/bt_ip/bt_ip.service /lib/systemd/system/bt_ip.service
 sudo chmod 644 /lib/systemd/system/bt_ip.service
 sudo systemctl daemon-reload
-sudo systemctl enable sample.service
+sudo systemctl enable bt_ip.service
 
 read -p "Do you want to reboot now? [Y/n] " -n 1 -r
 echo    
