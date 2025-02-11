@@ -16,6 +16,7 @@ sudo pip3 install --break-system-packages --upgrade adafruit-circuitpython-amg88
 sudo pip3 install --break-system-packages --upgrade bless
 
 git clone https://github.com/spartanrobot/bt_ip.git
+sudo chown -R admin bt_ip
 # Might need to add system dependencies for bless
 sudo cp /home/admin/bt_ip/bt_ip.service /lib/systemd/system/bt_ip.service
 sudo chmod 644 /lib/systemd/system/bt_ip.service
