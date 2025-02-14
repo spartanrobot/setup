@@ -6,7 +6,7 @@ sudo raspi-config nonint do_camera 0
 sudo raspi-config nonint disable_raspi_config_at_boot 0
 
 sudo apt update
-sudo apt-get install -y python3-pip git i2c-tools libgpiod-dev python3-libgpiod
+sudo apt-get install -y python3-pip git i2c-tools libgpiod-dev python3-libgpiod python-scipy
 sudo pip3 install --break-system-packages --upgrade adafruit-blinka
 
 sudo apt remove python3-rpi.gpio
@@ -14,7 +14,7 @@ sudo pip3 uninstall -y RPi.GPIO
 sudo pip3 install --break-system-packages --upgrade rpi-lgpio
 
 sudo pip3 install --break-system-packages --upgrade adafruit-circuitpython-amg88xx adafruit-circuitpython-rplidar adafruit-circuitpython-motor
-sudo pip3 install --break-system-packages --upgrade bless
+sudo pip3 install --break-system-packages --upgrade bless scipy numpy
 
 git clone https://github.com/spartanrobot/bt_ip.git
 sudo chown -R admin bt_ip
