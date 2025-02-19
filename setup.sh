@@ -1,22 +1,23 @@
 sudo raspi-config nonint do_i2c 0
 sudo raspi-config nonint do_i2c 1
-sudo raspi-config nonint do_spi 0
+sudo raspi-config nonint do_spi 1
 sudo raspi-config nonint do_serial_hw 0
 sudo raspi-config nonint do_ssh 0
 sudo raspi-config nonint do_camera 0
 sudo raspi-config nonint disable_raspi_config_at_boot 0
 # Enable 1Wire
+echo "dtoverlay=pwm-2chan" | sudo tee -a /boot/firmware/config.txt | sudo tee -a /boot/config.txt
 
 sudo apt update
 sudo apt-get install -y python3-pip git i2c-tools libgpiod-dev python3-libgpiod python-scipy
 sudo pip3 install --break-system-packages --upgrade adafruit-blinka
 
 sudo apt remove python3-rpi.gpio
-sudo pip3 uninstall -y RPi.GPIO
+sudo pip3 uninstall --break-system-packages  -y RPi.GPIO
 sudo pip3 install --break-system-packages --upgrade rpi-lgpio
 
 sudo pip3 install --break-system-packages --upgrade adafruit-circuitpython-amg88xx adafruit-circuitpython-rplidar adafruit-circuitpython-motor
-sudo pip3 install --break-system-packages --upgrade bless scipy numpy
+sudo pip3 install --break-system-packages --upgrade bless scipy numpy rpi-hardware-pwm
 
 git clone https://github.com/spartanrobot/bt_ip.git
 sudo chown -R admin bt_ip
@@ -27,7 +28,7 @@ sudo systemctl daemon-reload
 sudo systemctl enable bt_ip.service
 
 # Fix GPIO issues
-sudo pip3 uninstall --break-system-packages adafruit-blinka
+sudo pip3 uninstall --break-system-packages -y adafruit-blinka
 sudo pip3 install --break-system-packages git+https://github.com/frank-pet/Adafruit_Blinka.git@651192bdb5c1d97e5d5e401e0dd17a0d65c15371
 
 read -p "Do you want to reboot now? [Y/n] " -n 1 -r
