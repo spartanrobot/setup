@@ -6,7 +6,8 @@ sudo raspi-config nonint do_ssh 0
 sudo raspi-config nonint do_camera 0
 sudo raspi-config nonint disable_raspi_config_at_boot 0
 # Enable 1Wire
-echo "dtoverlay=pwm-2chan" | sudo tee -a /boot/firmware/config.txt | sudo tee -a /boot/config.txt
+echo "dtoverlay=pwm-2chan" | sudo tee -a /boot/firmware/config.txt
+echo "dtparam=sd_cqe=0" | sudo tee -a /boot/firmware/config.txt # https://forums.raspberrypi.com/viewtopic.php?p=2287745#p2287745
 
 sudo apt update
 sudo apt-get install -y python3-pip git i2c-tools libgpiod-dev python3-libgpiod python-scipy
