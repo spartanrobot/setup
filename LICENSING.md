@@ -15,3 +15,7 @@
 * Other Files
     * Author's Permission, [Lupin3000 on GitHub](https://github.com/Lupin3000/RPLidar)
     * MIT, [jjehl on GitHub](https://github.com/Roboticia/RPLidar)
+
+### Spartan API
+* thermal.py
+   * MIT, [ladyada on GitHub](https://github.com/adafruit/Adafruit_CircuitPython_AMG88xx)
