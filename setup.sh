@@ -14,8 +14,9 @@ sudo pip3 uninstall -y RPi.GPIO
 sudo pip3 install --break-system-packages --upgrade rpi-lgpio
 
 sudo pip3 install --break-system-packages --upgrade adafruit-circuitpython-amg88xx adafruit-circuitpython-rplidar adafruit-circuitpython-motor
-sudo pip3 install --break-system-packages --upgrade bless
+sudo pip3 install --break-system-packages --upgrade bless numpy
 
+git config --global init.defaultBranch main
 git clone https://github.com/spartanrobot/bt_ip.git
 sudo chown -R admin bt_ip
 # Might need to add system dependencies for bless
