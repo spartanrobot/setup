@@ -34,7 +34,7 @@ sudo pip3 uninstall --break-system-packages -y adafruit-blinka
 sudo pip3 install --break-system-packages "git+https://github.com/frank-pet/Adafruit_Blinka.git@651192bdb5c1d97e5d5e401e0dd17a0d65c15371"
 
 read -p "Do you want to reboot now? [Y/n] " confirm    
-if [[ $REPLY =~ ^[Yy]$ ]]
+if [[ "$confirm" =~ "^[Yy]$" ]]
 then
     sudo reboot
 fi
