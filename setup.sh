@@ -10,7 +10,7 @@ echo "dtoverlay=pwm-2chan" | sudo tee -a /boot/firmware/config.txt
 echo "dtparam=sd_cqe=0" | sudo tee -a /boot/firmware/config.txt # https://forums.raspberrypi.com/viewtopic.php?p=2287745#p2287745
 
 sudo apt update
-sudo apt-get install -y python3-pip git i2c-tools libgpiod-dev python3-libgpiod python-scipy
+sudo apt install -y python3-pip git i2c-tools libgpiod-dev python3-libgpiod python3-scipy
 sudo pip3 install --break-system-packages --upgrade adafruit-blinka
 
 sudo apt remove python3-rpi.gpio
