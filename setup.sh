@@ -21,7 +21,7 @@ sudo pip3 install --break-system-packages --upgrade adafruit-circuitpython-amg88
 sudo pip3 install --break-system-packages --upgrade bless scipy numpy rpi-hardware-pwm
 
 git config --global init.defaultBranch main
-git clone https://github.com/spartanrobot/bt_ip.git
+git clone "https://github.com/spartanrobot/bt_ip.git"
 sudo chown -R admin bt_ip
 # Might need to add system dependencies for bless
 sudo cp /home/admin/bt_ip/bt_ip.service /lib/systemd/system/bt_ip.service
@@ -31,7 +31,7 @@ sudo systemctl enable bt_ip.service
 
 # Fix GPIO issues
 sudo pip3 uninstall --break-system-packages -y adafruit-blinka
-sudo pip3 install --break-system-packages git+https://github.com/frank-pet/Adafruit_Blinka.git@651192bdb5c1d97e5d5e401e0dd17a0d65c15371
+sudo pip3 install --break-system-packages "git+https://github.com/frank-pet/Adafruit_Blinka.git@651192bdb5c1d97e5d5e401e0dd17a0d65c15371"
 
 read -p "Do you want to reboot now? [Y/n] " -n 1 -r
 echo    
