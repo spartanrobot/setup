@@ -1,1 +1,3 @@
-`curl -LSsf "https://tinyurl.com/spartansetup"`
+```bash
+curl -LSsf "https://tinyurl.com/spartansetup"
+```
