@@ -14,7 +14,7 @@ sudo apt remove python3-rpi.gpio
 sudo pip3 uninstall --break-system-packages  -y RPi.GPIO
 sudo pip3 install --break-system-packages --upgrade rpi-lgpio
 
-# Add all other adafruit-circuitpython-xyz packages on this line: sudo pip3 install --break-system-packages --upgrade 
+# Add all other adafruit-circuitpython-xyz packages on this line: sudo pip3 install --break-system-packages --upgrade adafruit-circuitpython-xyz
 
 # Fix GPIO issues
 sudo pip3 uninstall --break-system-packages -y adafruit-blinka
