@@ -1,3 +1,3 @@
 ```bash
-curl -LSsf "https://tinyurl.com/spartansetup"
+curl -LSsf "https://tinyurl.com/spartansetup" | bash
 ```
