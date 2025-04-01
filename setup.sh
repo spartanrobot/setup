@@ -16,7 +16,7 @@ sudo apt remove python3-rpi.gpio
 sudo pip3 uninstall --break-system-packages  -y RPi.GPIO
 sudo pip3 install --break-system-packages --upgrade rpi-lgpio
 
-sudo pip3 install --break-system-packages --upgrade adafruit-circuitpython-amg88xx adafruit-circuitpython-rplidar adafruit-circuitpython-motor
+sudo pip3 install --break-system-packages --upgrade adafruit-circuitpython-amg88xx adafruit-circuitpython-rplidar adafruit-circuitpython-motor adafruit-circuitpython-bno055
 sudo pip3 install --break-system-packages --upgrade bless scipy numpy rpi-hardware-pwm
 
 git config --global init.defaultBranch main
