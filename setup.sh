@@ -7,6 +7,7 @@ sudo raspi-config nonint disable_raspi_config_at_boot 0
 # Enable 1Wire
 echo "dtoverlay=pwm-2chan" | sudo tee -a /boot/firmware/config.txt
 echo "dtparam=sd_cqe=0" | sudo tee -a /boot/firmware/config.txt # https://forums.raspberrypi.com/viewtopic.php?p=2287745#p2287745
+echo "dtparam=i2c_arm_baudrate=10000" | sudo tee -a /boot/firmware/config.txt
 
 sudo apt update
 sudo apt install -y python3-pip git i2c-tools libgpiod-dev python3-libgpiod python3-scipy
