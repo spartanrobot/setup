@@ -18,7 +18,7 @@ sudo pip3 uninstall --break-system-packages  -y RPi.GPIO
 sudo pip3 install --break-system-packages --upgrade rpi-lgpio
 
 sudo pip3 install --break-system-packages --upgrade adafruit-circuitpython-amg88xx adafruit-circuitpython-rplidar adafruit-circuitpython-motor adafruit-circuitpython-bno055
-sudo pip3 install --break-system-packages --upgrade bless scipy numpy rpi-hardware-pwm
+sudo pip3 install --break-system-packages --upgrade bless scipy numpy filterpy rpi-hardware-pwm
 
 git config --global init.defaultBranch main
 git clone "https://github.com/spartanrobot/bt_ip.git"
