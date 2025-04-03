@@ -11,6 +11,7 @@ echo "dtparam=i2c_arm_baudrate=10000" | sudo tee -a /boot/firmware/config.txt
 
 sudo apt update
 sudo apt install -y python3-pip git i2c-tools libgpiod-dev python3-libgpiod python3-scipy
+sudo python3 -m pip config set global.break-system-packages true
 sudo pip3 install --break-system-packages --upgrade adafruit-blinka
 
 sudo apt remove python3-rpi.gpio
